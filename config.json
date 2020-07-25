@@ -1,0 +1,78 @@
+{
+    "read_config": {
+
+        "tag_regex": "[a-z]*_[a-z]*_[0-9]{4}", 
+
+        "ENTRYTYPE": {
+
+            "article" : {
+                "fields": [
+                    "title",
+                    "author",
+                    "journal",
+                    "volume",
+                    "pages",
+                    "year"
+                ],
+                "keywords" : { 
+                    "journal": ["myJournal"], 
+                    "title" : ["something"]
+                }
+            }, 
+
+            "book": {
+                "fields": [
+                    "title",
+                    "author",
+                    "publisher",
+                    "year"
+                ], 
+                "keywords": {
+                    "title": ["Introduction"]
+                }
+            }, 
+
+            "inproceedings": {
+                "fields": [
+                    "title",
+                    "author",
+                    "year", 
+                    "booktitle",
+                    "series",
+                    "publisher",
+                    "pages"
+                ],
+                "keywords": {}
+            }, 
+
+            "misc": {
+                "fields": [
+                    "title",
+                    "author",
+                    "publisher",
+                    "year"
+                ],
+                "keywords": {}
+            }, 
+
+            "techreport": {
+                "fields": [
+                    "author",
+                    "title",
+                    "number", 
+                    "institution",
+                    "year"
+                ],
+                "keywords": {}
+            }
+
+        }
+
+    }, 
+
+    "write_config": {
+
+        "sort_order": ["ENTRYTYPE", "author", "year"]
+
+    }
+}
